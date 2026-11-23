@@ -1,0 +1,38 @@
+nums = [n for n in range(1, 11) if n % 2 == 0]
+print("Список чётных:", nums)  # [2, 4, 6, 8, 10]
+
+user = {
+    "apple": 50,
+    "milk": 90,
+    "bread": 40,
+}
+user["milk"] = 95 
+for key, value in user.items():
+    print(f"{key}: {value}")
+    
+raw_list = [1, 2, 2, 3, 3, 3, 4]
+tags = set(raw_list)
+print("Множество без дублей:", tags)  # {1, 2, 3, 4}
+print("Элемент 2 в множестве:", 2 in tags)     # True
+print("Элемент 10 в множестве:", 10 in tags)   # False
+
+tuple координат: попытка изменения и TypeError через try/except
+point = (10, 20)
+try:
+    point[0] = 99
+except TypeError:
+    print("TypeError: кортеж нельзя изменить")
+
+for_result = []
+for n in range(1, 6):
+    for_result.append(n * n)
+comprehension_result = [n * n for n in range(1, 6)]
+print("Квадраты через for:", for_result)
+print("Квадраты через comprehension:", comprehension_result)
+print("Результаты совпадают:", for_result == comprehension_result)
+
+assert isinstance(nums, list)
+assert isinstance(user, dict)
+assert isinstance(tags, set)
+assert isinstance(point, tuple)
+print("ok")
